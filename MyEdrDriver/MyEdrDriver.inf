@@ -1,0 +1,33 @@
+;
+; MyEdrDriver.inf - minimal install information for a software-only kernel
+; service. We do not actually install via the INF in the tutorial (we use
+; sc.exe), but the WDK build wants one and it documents the service intent.
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %ManufacturerName%
+DriverVer   =
+CatalogFile = MyEdrDriver.cat
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 12   ; %windir%\System32\drivers
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+MyEdrDriver.sys = 1
+
+[DefaultInstall.NTamd64]
+CopyFiles = DriverCopy
+
+[DriverCopy]
+MyEdrDriver.sys
+
+[Strings]
+ManufacturerName = "Anagha P Krishna"
+DiskName         = "MyEDR Driver Install Disk"
