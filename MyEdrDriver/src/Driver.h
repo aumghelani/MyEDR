@@ -40,9 +40,12 @@
 // in one RtlCopyMemory with no fix-ups.
 // ---------------------------------------------------------------------------
 typedef enum _EDR_EVENT_TYPE {
-    EdrEventProcessCreate = 1,
-    EdrEventProcessExit   = 2,
-    EdrEventRemoteThread  = 3,  // a thread created into a process by another process
+    EdrEventProcessCreate   = 1,
+    EdrEventProcessExit     = 2,
+    EdrEventRemoteThread    = 3,  // a thread created into a process by another process
+    EdrEventImageLoad       = 4,  // image mapped from a suspicious path
+    EdrEventRegistryPersist = 5,  // write to an autostart Run key
+    EdrEventLsassAccess     = 6,  // handle to LSASS with memory-read access
 } EDR_EVENT_TYPE;
 
 typedef enum _EDR_SEVERITY {
