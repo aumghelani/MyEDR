@@ -1,0 +1,8 @@
+build/
+x64/
+*.obj
+*.pdb
+*.suo
+*.user
+.vs/
+*.cer
