@@ -29,5 +29,5 @@ CopyFiles = DriverCopy
 MyEdrDriver.sys
 
 [Strings]
-ManufacturerName = "Anagha P Krishna"
+ManufacturerName = "Aum Ghelani"
 DiskName         = "MyEDR Driver Install Disk"
